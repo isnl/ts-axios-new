@@ -22,6 +22,7 @@ export function buildURL(url: string, params?: any): string {
     let values = []
     if (Array.isArray(val)) {
       values = val
+      key +='[]'
     } else {
       values = [val]
     }
@@ -42,5 +43,5 @@ export function buildURL(url: string, params?: any): string {
     }
     url += (url.includes('?') ? '&' : '?') + serializedParams
   }
-  return url + serializedParams
+  return url
 }
