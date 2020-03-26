@@ -16,4 +16,5 @@ export function processHeaders(headers: any, data: any): any {
       headers['Content-type'] = 'application/json;charset=utf-8'
     }
   }
+  return headers
 }
